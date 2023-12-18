@@ -182,7 +182,7 @@ export default function Home() {
           data-transition-in
           className="z-50 fixed top-0 right-[-2px] w-[80%] md:w-1/2 h-screen bg-[#c3e4ff]"
         ></motion.canvas>
-        <div className="h-[60px] bg-[#1D2B3A] fixed bottom-0 z-20 w-full flex flex-row items-center justify-normal">
+        <div className="h-[60px] bg-[#1D2B3A] fixed bottom-0 z-20 w-full flex px-20 items-center space-x-40">
           <p className="text-white/80 text-base md:text-lg font-semibold md:leading-[60px] whitespace-nowrap flex flex-row">
             Contact me through:
           </p>
