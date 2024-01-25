@@ -40,13 +40,13 @@ module.exports = {
       },
       textColor: {
         lightGray: '#F1EFEE',
-        primary: '#FAFAFA',
-        secColor: '#efefef',
+        primary: '#FFFFFF',
+        secColor: '#0DB760',
         navColor: '#BEBEBE',
       },
       backgroundColor: {
-        mainColor: '#FBF8F9',
-        secondaryColor: '#F0F0F0',
+        mainColor: '#000000',
+        secondaryColor: '#0DB760',
         blackOverlay: 'rgba(0, 0 ,0 ,0.7)',
       },
       keyframes: {
