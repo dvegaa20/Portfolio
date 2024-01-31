@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
 :root{
     --font-family: 'Inter', sans-serif;
 
     --color-bg: #000000;
-    --color-primary: #0DB760;
-    --color-secondary: #9D9FA1;
+    --color-primary-bg: rgba(24, 24, 29, 0.30);
+    --color-secondary: #1C1C21;
+    --color-text: #C5C5C5;
+    --color-hover: #2cfbed;
 }
