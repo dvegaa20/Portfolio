@@ -1,22 +1,23 @@
-import Grid from "@/components/Grid";
-import Hero from "@/components/Hero";
 import { FloatingNav } from "@/components/ui/FloatingNav";
-import { FaHome } from "react-icons/fa";
+import Hero from "@/components/Hero";
+import Grid from "@/components/Grid";
+import Projects from "@/components/Projects";
+import Experience from "@/components/Experience";
+import { Journey } from "@/components/Journey";
+import Footer from "@/components/Footer";
+import { navItems } from "@/data";
 
 export default function Home() {
   return (
-    <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
+    <main className="relative bg-black-100 flex justify-center items-center flex-col mx-auto sm:px-10 px-5 overflow-clip">
       <div className="max-w-7xl w-full">
-        <FloatingNav
-          navItems={[
-            { name: "Home", link: "#home", icon: <FaHome /> },
-            { name: "About", link: "#about" },
-            { name: "Projects", link: "#projects" },
-            { name: "Contact", link: "#contact" },
-          ]}
-        />
+        <FloatingNav navItems={navItems} />
         <Hero />
         <Grid />
+        <Projects />
+        <Experience />
+        <Journey />
+        <Footer />
       </div>
     </main>
   );

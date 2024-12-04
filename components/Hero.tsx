@@ -3,6 +3,7 @@ import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa";
+import { FlipWords } from "./ui/FlipWords";
 
 function Hero() {
   return (
@@ -36,7 +37,10 @@ function Hero() {
             words="Transforming Concepts Into Seamless Experiences"
           />
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi, I&apos;m Diego
+            Hi, I&apos;m Diego a
+            <FlipWords
+              words={["Web Developer", "Mobile Developer", "Data Analyst"]}
+            />
           </p>
           <a href="#about">
             <MagicButton

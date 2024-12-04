@@ -1,6 +1,13 @@
+"use client";
+
+import React, { useState } from "react";
 import { cn } from "@/lib/utils";
-import { BackgroundGradientAnimation } from "./GradientBg";
+import { IoCopyOutline } from "react-icons/io5";
 import Lottie from "react-lottie";
+import animationData from "@/data/confetti.json";
+import { BackgroundGradientAnimation } from "./GradientBg";
+import MagicButton from "./MagicButton";
+import { GlowingStarsBackgroundCard, GlowingStarsTitle } from "./GlowingStars";
 
 export const BentoGrid = ({
   className,
@@ -42,6 +49,14 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
+  const [copied, setcopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText("diego.vega.camacho@gmail.com");
+
+    setcopied(true);
+  };
+
   return (
     <div
       className={cn(
@@ -54,7 +69,7 @@ export const BentoGridItem = ({
           "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
       }}
     >
-      <div className={`${id === 6} && 'flex justify-center h-full'`}>
+      <div className={`${id === 2 && "flex justify-center"} h-full'`}>
         <div className="w-full h-full absolute">
           {img && (
             <img
@@ -77,11 +92,7 @@ export const BentoGridItem = ({
             />
           )}
         </div>
-        {id === 6 && (
-          <BackgroundGradientAnimation>
-            <div className="absolute z-50 flex items-center justify-center text-white font-bold " />
-          </BackgroundGradientAnimation>
-        )}
+        {id === 2 && <BackgroundGradientAnimation />}
 
         <div
           className={cn(
@@ -126,17 +137,27 @@ export const BentoGridItem = ({
             </div>
           )}
 
-          {id === 6 && (
+          {id === 2 && (
             <div className="mt-5 relative">
               <div className={`absolute -bottom-5 right-0`}>
                 <Lottie
                   options={{
-                    loop: true,
-                    autoplay: true,
-                    animationData: require("../../public/lottie/hero.json"),
+                    loop: copied,
+                    autoplay: copied,
+                    animationData,
+                    rendererSettings: {
+                      preserveAspectRatio: "xMidYMid slice",
+                    },
                   }}
                 />
               </div>
+              <MagicButton
+                title={copied ? "Copied!" : "Copy my email"}
+                icon={<IoCopyOutline />}
+                position="left"
+                otherClasses="!bg-[#161a31]"
+                handleClick={handleCopy}
+              />
             </div>
           )}
         </div>
