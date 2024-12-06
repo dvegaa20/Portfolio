@@ -5,7 +5,7 @@ import { gridItems } from "@/data";
 function Grid() {
   return (
     <section id="about">
-      <BentoGrid>
+      <BentoGrid className="w-full">
         {gridItems.map(
           ({
             id,

@@ -7,7 +7,7 @@ import Lottie from "react-lottie";
 import animationData from "@/data/confetti.json";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import MagicButton from "./MagicButton";
-import { GlowingStarsBackgroundCard, GlowingStarsTitle } from "./GlowingStars";
+import { Meteors } from "../ui/Meteors";
 
 export const BentoGrid = ({
   className,
@@ -69,13 +69,13 @@ export const BentoGridItem = ({
           "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
       }}
     >
-      <div className={`${id === 2 && "flex justify-center"} h-full'`}>
+      <div className={`${id === 6 && "flex justify-center"} h-full`}>
         <div className="w-full h-full absolute">
           {img && (
             <img
               src={img}
               alt={img}
-              className={cn(imgClassName, "object-cover, object-center")}
+              className={cn(imgClassName, "object-cover object-center ")}
             />
           )}
         </div>
@@ -92,7 +92,11 @@ export const BentoGridItem = ({
             />
           )}
         </div>
-        {id === 2 && <BackgroundGradientAnimation />}
+        {id === 6 && (
+          <BackgroundGradientAnimation>
+            <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
+          </BackgroundGradientAnimation>
+        )}
 
         <div
           className={cn(
@@ -106,12 +110,12 @@ export const BentoGridItem = ({
           <div className="font-sans font-bold text-lg lg:text-3xl max-w-96 z-10">
             {title}
           </div>
-          {/* {id === 2 && <GridGlobe />} */}
+          {id === 2 && <Meteors number={40} />}
           {id === 3 && (
             <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
               {/* tech stack lists */}
               <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
-                {["React.js", "Next.js", "TypeScript"].map((item) => (
+                {["Python", "Next.js", "JavaScript"].map((item) => (
                   <span
                     key={item}
                     className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
@@ -124,7 +128,7 @@ export const BentoGridItem = ({
               </div>
               <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
                 <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
-                {["Vue.js", "AWS", "MongoDB"].map((item) => (
+                {["React.js", "TypeScript", "Swift"].map((item) => (
                   <span
                     key={item}
                     className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
@@ -137,7 +141,7 @@ export const BentoGridItem = ({
             </div>
           )}
 
-          {id === 2 && (
+          {id === 6 && (
             <div className="mt-5 relative">
               <div className={`absolute -bottom-5 right-0`}>
                 <Lottie
