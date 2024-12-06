@@ -2,7 +2,7 @@ import React from "react";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import MagicButton from "./ui/MagicButton";
-import { FaLocationArrow } from "react-icons/fa";
+import { FaDownload, FaLocationArrow } from "react-icons/fa";
 import { FlipWords } from "./ui/FlipWords";
 
 function Hero() {
@@ -48,10 +48,10 @@ function Hero() {
               ]}
             />
           </p>
-          <a href="#about">
+          <a href="/CV_DiegoVega.pdf" download>
             <MagicButton
-              title="Show My work"
-              icon={<FaLocationArrow />}
+              title="Download my CV"
+              icon={<FaDownload />}
               position="right"
             />
           </a>

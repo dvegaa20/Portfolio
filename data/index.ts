@@ -1,4 +1,5 @@
 import { link } from "fs";
+import { url } from "inspector";
 
 // Navigation items //
 export const navItems = [
@@ -17,8 +18,8 @@ export const gridItems = [
     description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
-    titleClassName: "justify-end",
-    img: "/b1.svg",
+    titleClassName: "justify-start",
+    img: "/eth.svg",
     spareImg: "",
   },
   {
@@ -28,7 +29,7 @@ export const gridItems = [
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center text-center",
-    img: "",
+    img: "/grid.svg",
     spareImg: "",
   },
   {
@@ -38,7 +39,7 @@ export const gridItems = [
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
-    img: "",
+    img: "/grid.svg",
     spareImg: "",
   },
   {
@@ -87,11 +88,11 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    linkRepo: "https://github.com/adrianhajdin/zoom-clone",
+    title: "Blackdot - Software Department",
+    des: "Contributed to the development of an Odoo module to improve organizational well-being, with personalized surveys and reports.",
+    img: "/p1.png",
+    iconLists: ["/py.svg", "/odoo.svg", "/cmmi.png"],
+    linkRepo: "https://github.com/dvegaa20/cr-blackdot",
     linkProyect: "",
   },
   {
@@ -215,13 +216,16 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    url: "https://github.com/dvegaa20",
   },
   {
     id: 2,
     img: "/twit.svg",
+    url: "https://github.com/dvegaa20",
   },
   {
     id: 3,
     img: "/link.svg",
+    url: "https://www.linkedin.com/in/diegovegacam/",
   },
 ];
