@@ -220,12 +220,12 @@ export const socialMedia = [
   },
   {
     id: 2,
-    img: "/twit.svg",
-    url: "https://github.com/dvegaa20",
+    img: "/link.svg",
+    url: "https://www.linkedin.com/in/diegovegacam/",
   },
   {
     id: 3,
-    img: "/link.svg",
-    url: "https://www.linkedin.com/in/diegovegacam/",
+    img: "/leet.svg",
+    url: "https://leetcode.com/diego_vega21",
   },
 ];

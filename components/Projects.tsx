@@ -34,9 +34,7 @@ function Projects() {
                   >
                     {des}{" "}
                     <span className="underline underline-offset-4">
-                      <a href={linkRepo}>
-                        Click here to view the project repo.
-                      </a>
+                      <a href={linkRepo}>Click here to view more.</a>
                     </span>
                   </CardItem>
                   <CardItem
@@ -72,7 +70,7 @@ function Projects() {
                       <CardItem
                         translateZ={20}
                         as={Link}
-                        href={linkProyect}
+                        href={linkProyect ? linkProyect : "/project-details"}
                         target="__blank"
                         className="flex items-center lg:text-sm text-xs text-purple border border-white/[0.2] rounded-full px-4 py-2 hover:bg-purple hover:text-white group"
                       >

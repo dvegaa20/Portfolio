@@ -9,6 +9,9 @@ function Experience() {
         My
         <span className="text-purple"> work experience</span>
       </h1>
+      <h2 className="heading !text-sm mt-2">
+        not technically a job, but close
+      </h2>
       <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
         {workExperience.map((card) => (
           <Button

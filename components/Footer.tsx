@@ -31,20 +31,18 @@ function Footer() {
         </p>
         <div className="flex items-center md:gap-3 gap-6">
           {socialMedia.map((profile) => (
-            <a
+            <LinkPreview
               key={profile.id}
-              href={profile.url}
-              className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
+              url={profile.url}
+              className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300 font-bold"
             >
-              <LinkPreview url={profile.url} className="font-bold">
-                <img
-                  src={profile.img}
-                  alt={profile.id.toString()}
-                  width={20}
-                  height={20}
-                />
-              </LinkPreview>
-            </a>
+              <img
+                src={profile.img}
+                alt={profile.id.toString()}
+                width={20}
+                height={20}
+              />
+            </LinkPreview>
           ))}
         </div>
       </div>
