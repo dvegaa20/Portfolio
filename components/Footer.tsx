@@ -2,7 +2,6 @@ import React from "react";
 import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa";
 import { socialMedia } from "@/data";
-import { profile } from "console";
 import { LinkPreview } from "./ui/LinkPreview";
 
 function Footer() {
