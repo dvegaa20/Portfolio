@@ -10,19 +10,11 @@ export default function AppleCardsCarousel() {
   ));
 
   return (
-    <div className="w-full h-full py-20">
-      <div className="flex items-center justify-center">
-        <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
-          Get to know see more of
-          <span className="text-purple"> my projects</span>.
-        </h2>
-        <a
-          href="/"
-          className="flex items-center lg:text-sm text-xs text-purple border border-white/[0.2] rounded-full px-4 py-2 transition-colors duration-300 hover:bg-purple hover:text-white group"
-        >
-          Go Back
-        </a>
-      </div>
+    <div className="w-full h-full py-20" id="projects">
+      <h2 className="heading">
+        See more of
+        <span className="text-purple"> My Projects</span>.
+      </h2>
       <Carousel items={cards} />
     </div>
   );

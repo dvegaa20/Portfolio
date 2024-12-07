@@ -7,7 +7,7 @@ function Experience() {
     <div id="experience">
       <h1 className="heading">
         My
-        <span className="text-purple"> work experience</span>
+        <span className="text-purple"> Work Experience</span>
       </h1>
       <h2 className="heading !text-sm mt-2">
         not technically a job, but close
