@@ -37,7 +37,7 @@ function Hero() {
             words="Simple, Clean, and Effective Digital Solutions"
           />
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi, I&apos;m Diego a
+            Hi, I&apos;m Diego Vega a
             <FlipWords
               words={[
                 "Software Engineer",

@@ -151,7 +151,13 @@ export const projectData = [
         project={{
           des: "Ingex Transportes is a powerful Fleet Management Dashboard designed to revolutionize decision-making processes for the company TDR Transportes. By meticulously analyzing maintenance and repair data, this interactive dashboard provides actionable insights to optimize operations and reduce costs. The platform features a predictive model that utilizes cutting-edge statistical methods to forecast the number of days until the next repair for each component, empowering fleet managers to implement timely maintenance strategies. Aligned with the client’s objective of reducing maintenance costs by 15%, Ingex Transportes delivers enhanced efficiency, improved reliability, and a data-driven approach to fleet management. It is an indispensable tool for achieving operational excellence in this transportation industry.",
           img: ["/p1.png"],
-          iconLists: ["/re.svg", "/py.svg", "/dash.svg", "/tail.svg"],
+          iconLists: [
+            "/re.svg",
+            "/py.svg",
+            "/dash.svg",
+            "/tail.svg",
+            "figma.svg",
+          ],
           linkRepo: "https://github.com/dvegaa20/TDR-Dashboard",
           linkProyect: "https://tdr-dashboard.vercel.app/",
         }}
@@ -193,6 +199,7 @@ export const projectData = [
             "/tail.svg",
             "/firebase.svg",
             "/oauth.svg",
+            "/figma.svg",
           ],
           linkRepo: "https://github.com/dvegaa20/Net-Zero-Citizens",
           linkProyect: "",
@@ -203,22 +210,16 @@ export const projectData = [
   {
     id: 6,
     category: "Multi-Agent Systems",
-    title: "Development of MultiAgent Systems for Task Optimization.",
+    title: "Multi-Agent System for Food Collection.",
     src: "https://images.unsplash.com/photo-1580835239846-5bb9ce03c8c3?q=80&w=2836&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageContent: "",
     content: (
       <DummyContent
         project={{
-          des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-          img: ["/p1.png", "", ""],
-          iconLists: [
-            "/re.svg",
-            "/tail.svg",
-            "/ts.svg",
-            "/three.svg",
-            "/c.svg",
-          ],
-          linkRepo: "https://github.com/adrianhajdin/ai_saas_app",
+          des: "Developed a multi-agent system designed to solve a cooperative task in a dynamically changing 20x20 environment. The system operates within a grid-like world where agents can move to adjacent cells if they are unoccupied. In this environment, food can appear randomly in various cells, except for one special cell, which is considered a storage depot. Agents can only know if food is present in a cell when they visit it. Initially, food is placed in random cells, and new food items may appear dynamically throughout the environment, with the exception of the storage depot. Agents can assume different roles, such as explorers or gatherers, and they communicate and cooperate to efficiently find and collect food, optimizing their collective effort and adapting to the changing dynamics of the environment.",
+          img: ["/p1.png"],
+          iconLists: ["/py.svg", "/unity.svg", "/jupyter.svg"],
+          linkRepo: "https://github.com/dvegaa20/Unity",
           linkProyect: "",
         }}
       />
@@ -251,10 +252,16 @@ export const projectData = [
     content: (
       <DummyContent
         project={{
-          des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
+          des: "DispatchHealth is a web application designed to improve project management efficiency for work teams, streamlining workflows and enhancing collaboration across all levels. I played an active role in the development of this application, contributing to the design and implementation of features that help teams manage tasks, deadlines, and communication effectively. Using the Agile methodology, we ensured continuous feedback, rapid iteration, and a focus on delivering high-quality results on time. This approach helped to improve team productivity, optimize project workflows, and ensure that the final product met the needs of all stakeholders, ultimately driving the success of the application in enhancing operational efficiency for the teams using it.",
           img: ["/p1.png"],
-          iconLists: ["/html.svg", "/css.svg", "/js.svg", "/node.svg"],
-          linkRepo: "https://github.com/adrianhajdin/ai_saas_app",
+          iconLists: [
+            "/html.svg",
+            "/css.svg",
+            "/js.svg",
+            "/node.svg",
+            "/figma.svg",
+          ],
+          linkRepo: "https://github.com/dembA7/Systarch",
           linkProyect: "",
         }}
       />
