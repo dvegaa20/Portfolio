@@ -233,17 +233,11 @@ export const projectData = [
     content: (
       <DummyContent
         project={{
-          des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-          img: ["/p1.png", "", ""],
-          iconLists: [
-            "/re.svg",
-            "/tail.svg",
-            "/ts.svg",
-            "/three.svg",
-            "/c.svg",
-          ],
-          linkRepo: "https://github.com/adrianhajdin/ai_saas_app",
-          linkProyect: "",
+          des: "Cloudhub, a SaaS startup, required a dynamic and engaging front-end for its landing page to effectively showcase its services and attract potential customers. As part of the development team, I was responsible for designing and building the front end of the homepage, translating detailed Figma mockups into an interactive, responsive, and high-quality web experience. This process involved implementing modern web technologies to ensure a smooth and visually appealing user experience, optimizing the layout for different devices, and ensuring alignment with the startup's branding and core messaging. The final product provided visitors with an intuitive and seamless introduction to Cloudhub's services, enhancing both user engagement and conversion potential.",
+          img: ["/p1.png"],
+          iconLists: ["/re.svg", "/css.svg", "/js.svg", "/figma.svg"],
+          linkRepo: "https://github.com/dvegaa20/SAAS-LP",
+          linkProyect: "https://saas-lp-navy.vercel.app/",
         }}
       />
     ),
@@ -258,14 +252,8 @@ export const projectData = [
       <DummyContent
         project={{
           des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-          img: ["/p1.png", "", ""],
-          iconLists: [
-            "/re.svg",
-            "/tail.svg",
-            "/ts.svg",
-            "/three.svg",
-            "/c.svg",
-          ],
+          img: ["/p1.png"],
+          iconLists: ["/html.svg", "/css.svg", "/js.svg", "/node.svg"],
           linkRepo: "https://github.com/adrianhajdin/ai_saas_app",
           linkProyect: "",
         }}
