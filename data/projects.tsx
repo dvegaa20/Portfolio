@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 interface Project {
-  des: string;
+  des: React.ReactNode | string;
   img?: string[];
   iconLists: string[];
   linkRepo: string;
@@ -36,14 +36,16 @@ const DummyContent = ({ project }: { project: Project }) => {
                       Project
                     </a>
                   ) : null}
-                  <a
-                    href={project.linkRepo}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center lg:text-sm text-xs text-purple border border-white/[0.2] rounded-full px-4 py-2 hover:bg-purple hover:text-white group transition-colors duration-300"
-                  >
-                    Repository
-                  </a>
+                  {project.linkRepo ? (
+                    <a
+                      href={project.linkRepo}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center lg:text-sm text-xs text-purple border border-white/[0.2] rounded-full px-4 py-2 hover:bg-purple hover:text-white group transition-colors duration-300"
+                    >
+                      Repository
+                    </a>
+                  ) : null}
                 </div>
               </div>
             )}
@@ -107,7 +109,28 @@ export const projectData = [
     content: (
       <DummyContent
         project={{
-          des: "StreakUp is an innovative iOS application designed to help you track and visualize your streaks for habits and routines, empowering you to build and maintain a healthier, more productive lifestyle. Whether you're working on daily fitness goals, developing new skills, or simply forming better habits, StreakUp provides an intuitive interface to monitor your progress, celebrate your milestones, and stay motivated to achieve your personal growth objectives. The app integrates sleek design with customizable features, ensuring it adapts perfectly to your unique needs and keeps you on track for long-term success.",
+          des: (
+            <>
+              <span className="text-purple underline underline-offset-4">
+                StreakUp
+              </span>{" "}
+              is an innovative
+              <span className="text-purple"> iOS application</span> designed to
+              help you <span className="text-purple">track and visualize </span>
+              your streaks for
+              <span className="text-purple"> habits and routines</span>,
+              empowering you to build and maintain a healthier, more productive
+              lifestyle. Whether you're working on daily fitness goals,
+              developing new skills, or simply forming better habits, StreakUp
+              provides an intuitive interface to monitor your progress,
+              celebrate your milestones, and stay motivated to achieve your
+              <span className="text-purple"> personal growth objectives</span>.
+              The app integrates sleek design with
+              <span className="text-purple"> customizable features</span>,
+              ensuring it adapts perfectly to your unique needs and keeps you on
+              track for long-term success.
+            </>
+          ),
           img: [""],
           iconLists: ["./icons/swift.svg", "./icons/xcode.svg"],
           linkRepo: "",
@@ -125,7 +148,31 @@ export const projectData = [
     content: (
       <DummyContent
         project={{
-          des: "DenTech is a comprehensive dental patient management system designed to streamline the workflow of dental professionals and enhance patient care. This cutting-edge web application enables dentists to efficiently manage their patient records, including appointments, treatment plans, and detailed medical histories, all within a secure and user-friendly platform. With features tailored to the needs of modern dental practices, DenTech simplifies administrative tasks, improves organization, and provides easy access to critical information, allowing dental teams to focus on delivering exceptional care. Whether for solo practitioners or multi-dentist clinics, DenTech is the ultimate tool for optimizing dental practice management.",
+          des: (
+            <>
+              <span className="text-purple underline underline-offset-4">
+                DenTech
+              </span>{" "}
+              is a comprehensive{" "}
+              <span className="text-purple">
+                dental patient management system
+              </span>{" "}
+              designed to streamline the workflow of dental professionals and
+              enhance patient care. This cutting-edge
+              <span className="text-purple"> web application</span> enables
+              dentists to efficiently manage their
+              <span className="text-purple"> patient records</span>, including
+              appointments, treatment plans, and detailed medical histories, all
+              within a secure and user-friendly platform. With features tailored
+              to the needs of modern dental practices, DenTech simplifies
+              <span className="text-purple"> administrative tasks</span>,
+              improves organization, and provides easy access to critical
+              information, allowing dental teams to focus on delivering
+              <span className="text-purple"> exceptional care</span>. Whether
+              for solo practitioners or multi-dentist clinics, DenTech is the
+              ultimate tool for optimizing dental practice management.
+            </>
+          ),
           img: [""],
           iconLists: [
             "./icons/next.svg",
@@ -149,7 +196,41 @@ export const projectData = [
     content: (
       <DummyContent
         project={{
-          des: "Ingex Transportes is a powerful Fleet Management Dashboard designed to revolutionize decision-making processes for the company TDR Transportes. By meticulously analyzing maintenance and repair data, this interactive dashboard provides actionable insights to optimize operations and reduce costs. The platform features a predictive model that utilizes cutting-edge statistical methods to forecast the number of days until the next repair for each component, empowering fleet managers to implement timely maintenance strategies. Aligned with the client’s objective of reducing maintenance costs by 15%, Ingex Transportes delivers enhanced efficiency, improved reliability, and a data-driven approach to fleet management. It is an indispensable tool for achieving operational excellence in this transportation industry.",
+          des: (
+            <>
+              <span className="text-purple underline underline-offset-4">
+                Ingex Transportes
+              </span>{" "}
+              is a powerful{" "}
+              <span className="text-purple">Fleet Management Dashboard</span>{" "}
+              designed to revolutionize decision-making processes for the
+              company
+              <span className="text-purple"> TDR Transportes</span>. By
+              meticulously analyzing maintenance and repair data, this
+              interactive dashboard provides actionable insights to optimize
+              operations and reduce costs. The platform features a
+              <span className="text-purple"> predictive model</span> that
+              utilizes cutting-edge statistical methods to forecast the number
+              of days until the next repair for each component, empowering fleet
+              managers to implement timely maintenance strategies. Aligned with
+              the client&apos;s objective of{" "}
+              <span className="text-purple">
+                reducing maintenance costs by 15%
+              </span>{" "}
+              , Ingex Transportes delivers enhanced efficiency, improved
+              reliability, and a data-driven approach to fleet management. It is
+              an indispensable tool for achieving
+              <span className="text-purple"> operational excellence</span> in
+              this transportation industry.
+              <br />
+              <br />
+              <span className="underline underline-offset-4">
+                Disclaimer:
+              </span>{" "}
+              When first visiting the project, estimated time to load the data
+              is arround 30 seconds.
+            </>
+          ),
           img: ["/p1.png"],
           iconLists: [
             "./icons/re.svg",
@@ -173,7 +254,35 @@ export const projectData = [
     content: (
       <DummyContent
         project={{
-          des: "Talent-360, developed collaboratively within a Software Development Department (BlackDot) adhering to CMMI standards, introduced a groundbreaking Odoo module focused on enhancing organizational well-being. This module empowers client organizations to create and manage comprehensive surveys for their employees, offering insights into workplace climate, compliance with NOM035 standards, and tailored evaluations through personalized questionnaires. By implementing custom models, views, and controllers for the survey forms, the team successfully streamlined the process, reducing survey handling time by 40 minutes per session. The project exemplifies seamless teamwork, adherence to industry best practices, and a commitment to driving meaningful improvements in employee satisfaction and organizational compliance.",
+          des: (
+            <>
+              <span className="text-purple underline underline-offset-4">
+                Talent-360
+              </span>{" "}
+              was developed collaboratively within a Software Development
+              Department (BlackDot) adhering to CMMI standards, introduced a
+              groundbreaking
+              <span className="text-purple">Odoo module</span> focused on
+              enhancing organizational well-being. This module empowers client
+              organizations to create and manage comprehensive surveys for their
+              employees, offering insights into
+              <span className="text-purple"> workplace climate</span>,
+              compliance with
+              <span className="text-purple"> NOM035 standards</span>, and
+              tailored evaluations through personalized questionnaires. By
+              implementing{" "}
+              <span className="text-purple">
+                custom models, views, and controllers
+              </span>{" "}
+              for the survey forms, the team successfully streamlined the
+              process, reducing survey handling time by 40 minutes per session.
+              The project exemplifies seamless teamwork, adherence to industry
+              best practices, and a commitment to driving meaningful
+              improvements in
+              <span className="text-purple"> employee satisfaction</span> and
+              organizational compliance.
+            </>
+          ),
           img: ["/p1.png"],
           iconLists: ["./icons/py.svg", "./icons/odoo.svg", "./icons/cmmi.svg"],
           linkRepo: "https://github.com/Black-Dot-2024/cr-blackdot",
@@ -191,7 +300,28 @@ export const projectData = [
     content: (
       <DummyContent
         project={{
-          des: "Iniciativa Climática de México, a collaborative project aimed at promoting sustainability, involved the development of a comprehensive platform to connect clients with suppliers offering eco-friendly products. The project encompassed the creation of a mobile app, a user-friendly landing page, and an efficient admin system. The mobile app and landing page were designed to showcase eco-friendly suppliers and facilitate easy access for users interested in making sustainable purchasing decisions. Meanwhile, the admin system enabled the management of suppliers and it's products. This platform plays a key role in fostering a green economy, empowering users to make environmentally conscious choices while supporting sustainable businesses.",
+          des: (
+            <>
+              <span className="text-purple underline underline-offset-4">
+                Iniciativa Climática de México
+              </span>{" "}
+              is a collaborative project aimed at promoting sustainability,
+              involved the development of a comprehensive platform to connect
+              clients with suppliers offering
+              <span className="text-purple"> eco-friendly products</span>. The
+              project encompassed the creation of a
+              <span className="text-purple"> mobile app</span>, a user-friendly
+              landing page, and an efficient admin system. The mobile app and
+              landing page were designed to showcase eco-friendly suppliers and
+              facilitate easy access for users interested in making sustainable
+              purchasing decisions. Meanwhile, the admin system enabled the
+              management of suppliers and it's products. This platform plays a
+              key role in fostering a
+              <span className="text-purple"> green economy</span>, empowering
+              users to make environmentally conscious choices while supporting
+              <span className="text-purple"> sustainable businesses</span>.
+            </>
+          ),
           img: ["/p1.png"],
           iconLists: [
             "./icons/next.svg",
@@ -216,7 +346,32 @@ export const projectData = [
     content: (
       <DummyContent
         project={{
-          des: "Developed a multi-agent system designed to solve a cooperative task in a dynamically changing 20x20 environment. The system operates within a grid-like world where agents can move to adjacent cells if they are unoccupied. In this environment, food can appear randomly in various cells, except for one special cell, which is considered a storage depot. Agents can only know if food is present in a cell when they visit it. Initially, food is placed in random cells, and new food items may appear dynamically throughout the environment, with the exception of the storage depot. Agents can assume different roles, such as explorers or gatherers, and they communicate and cooperate to efficiently find and collect food, optimizing their collective effort and adapting to the changing dynamics of the environment.",
+          des: (
+            <>
+              <span className="text-purple underline underline-offset-4">
+                RappiAgents
+              </span>{" "}
+              is a system designed to solve a cooperative task in a {""}
+              <span className="text-purple">
+                dynamically changing 20x20 environment
+              </span>
+              . The system operates within a grid-like world where agents can
+              move to adjacent cells if they are unoccupied. In this
+              environment, <span className="text-purple"> food</span> can appear
+              randomly in various cells, except for one special cell, which is
+              considered a <span className="text-purple"> storage depot</span>.
+              Agents can only know if food is present in a cell when they visit
+              it. Initially, food is placed in random cells, and new food items
+              may appear dynamically throughout the environment, with the
+              exception of the storage depot. Agents can assume different roles,
+              such as{" "}
+              <span className="text-purple">explorers or gatherers</span>, and
+              they
+              <span className="text-purple"> communicate and cooperate</span> to
+              efficiently find and collect food, optimizing their collective
+              effort and adapting to the changing dynamics of the environment.
+            </>
+          ),
           img: ["/p1.png"],
           iconLists: [
             "./icons/py.svg",
@@ -238,7 +393,30 @@ export const projectData = [
     content: (
       <DummyContent
         project={{
-          des: "Cloudhub, a SaaS startup, required a dynamic and engaging front-end for its landing page to effectively showcase its services and attract potential customers. As part of the development team, I was responsible for designing and building the front end of the homepage, translating detailed Figma mockups into an interactive, responsive, and high-quality web experience. This process involved implementing modern web technologies to ensure a smooth and visually appealing user experience, optimizing the layout for different devices, and ensuring alignment with the startup's branding and core messaging. The final product provided visitors with an intuitive and seamless introduction to Cloudhub's services, enhancing both user engagement and conversion potential.",
+          des: (
+            <>
+              <span className="text-purple underline underline-offset-4">
+                Cloudhub
+              </span>
+              is a SaaS startup, which required a dynamic and engaging
+              <span className="text-purple"> front-end </span>
+              for its landing page to effectively showcase its services and
+              attract potential customers. As part of the development team, I
+              was responsible for designing and building the front end of the
+              homepage, translating detailed
+              <span className="text-purple"> figma mockups</span> into an
+              interactive, <span className="text-purple">responsive</span>, and
+              high-quality web experience. This process involved implementing
+              <span className="text-purple"> modern web technologies</span> to
+              ensure a smooth and visually appealing user experience, optimizing
+              the layout for different devices, and ensuring alignment with the
+              startup's branding and core messaging. The final product provided
+              visitors with an intuitive and seamless introduction to Cloudhub's
+              services, enhancing both
+              <span className="text-purple"> user engagement</span> and
+              conversion potential.
+            </>
+          ),
           img: ["/p1.png"],
           iconLists: [
             "./icons/re.svg",
@@ -261,7 +439,32 @@ export const projectData = [
     content: (
       <DummyContent
         project={{
-          des: "DispatchHealth is a web application designed to improve project management efficiency for work teams, streamlining workflows and enhancing collaboration across all levels. I played an active role in the development of this application, contributing to the design and implementation of features that help teams manage tasks, deadlines, and communication effectively. Using the Agile methodology, we ensured continuous feedback, rapid iteration, and a focus on delivering high-quality results on time. This approach helped to improve team productivity, optimize project workflows, and ensure that the final product met the needs of all stakeholders, ultimately driving the success of the application in enhancing operational efficiency for the teams using it.",
+          des: (
+            <>
+              <span className="text-purple underline underline-offset-4">
+                DispatchHealth
+              </span>{" "}
+              is a <span className="text-purple"> web application </span>
+              designed to{" "}
+              <span className="text-purple">
+                improve project management efficiency
+              </span>{" "}
+              for work teams, streamlining workflows and enhancing collaboration
+              across all levels. I played an active role in the development of
+              this application, contributing to the design and implementation of
+              features that help teams manage tasks, deadlines, and
+              communication effectively. Using the
+              <span className="text-purple"> agile methodology </span>, we
+              ensured continuous feedback, rapid iteration, and a focus on
+              delivering high-quality results on time. This approach
+              <span className="text-purple"> helped to improve </span>team
+              productivity, optimize project workflows, and ensure that the
+              final product met the needs of all stakeholders, ultimately
+              driving the success of the application in enhancing
+              <span className="text-purple"> operational efficiency </span> for
+              the teams using it.
+            </>
+          ),
           img: ["/p1.png"],
           iconLists: [
             "./icons/html.svg",
