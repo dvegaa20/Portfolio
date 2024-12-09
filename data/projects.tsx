@@ -216,7 +216,7 @@ export const projectData = [
               the client&apos;s objective of{" "}
               <span className="text-purple">
                 reducing maintenance costs by 15%
-              </span>{" "}
+              </span>
               , Ingex Transportes delivers enhanced efficiency, improved
               reliability, and a data-driven approach to fleet management. It is
               an indispensable tool for achieving
