@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Video from "next-video";
 
 import {
   Carousel,
@@ -67,24 +66,29 @@ const DummyContent = ({ project }: { project: Project }) => {
                   </h2>
                 </div>
                 <div className="space-y-10">
-                  {project.img.length > 1 ? (
+                  {project.img.length > 1 || project.video ? (
                     <Carousel>
                       <CarouselContent>
+                        {project.video && (
+                          <CarouselItem key="video">
+                            <iframe
+                              src={`https://www.youtube.com/embed/${project.video}`}
+                              style={{
+                                position: "relative",
+                                top: 0,
+                                left: 0,
+                                width: "100%",
+                                height: "100%",
+                              }}
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                              allowFullScreen
+                            />
+                          </CarouselItem>
+                        )}
                         {project.img.map((image, imgIndex) => (
-                          <CarouselItem>
-                            {project.video && (
-                              <Video
-                                src={project.video}
-                                controls
-                                className="rounded-lg"
-                              />
-                            )}
+                          <CarouselItem key={`project-image-${imgIndex}`}>
                             <Image
-                              key={`project-image-${imgIndex}`}
-                              src={
-                                image ||
-                                "https://images.unsplash.com/photo-1553451166-232112bda6f6?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                              }
+                              src={image}
                               alt={`Visual ${imgIndex}`}
                               height="2000"
                               width="2000"
@@ -97,10 +101,7 @@ const DummyContent = ({ project }: { project: Project }) => {
                     </Carousel>
                   ) : (
                     <Image
-                      src={
-                        project.img[0] ||
-                        "https://images.unsplash.com/photo-1553451166-232112bda6f6?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                      }
+                      src={project.img[0]}
                       alt="Default or single image"
                       height="2000"
                       width="2000"
@@ -166,7 +167,10 @@ export const projectData = [
               track for long-term success.
             </>
           ),
-          img: [""],
+          img: [
+            "https://images.unsplash.com/photo-1553451166-232112bda6f6?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          ],
+          video: "lEflo_sc82g",
           iconLists: ["./icons/swift.svg", "./icons/xcode.svg"],
           linkRepo: "",
           linkProyect: "",
@@ -208,7 +212,9 @@ export const projectData = [
               ultimate tool for optimizing dental practice management.
             </>
           ),
-          img: ["/phone1.svg"],
+          img: [
+            "https://images.unsplash.com/photo-1553451166-232112bda6f6?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          ],
           video: "",
           iconLists: [
             "./icons/next.svg",
@@ -274,7 +280,7 @@ export const projectData = [
             "/ingex4.svg",
             "/ingex5.svg",
           ],
-          video: "",
+          video: "lEflo_sc82g",
           iconLists: [
             "./icons/re.svg",
             "./icons/py.svg",
