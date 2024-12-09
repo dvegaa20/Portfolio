@@ -16,7 +16,7 @@ export default function Home() {
         <Grid />
         <AppleCardsCarousel />
         <Experience />
-        <Journey />
+        {/* <Journey /> */}
         <Footer />
       </div>
     </main>

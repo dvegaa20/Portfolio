@@ -6,9 +6,14 @@ export const journey = [
     title: "2024",
     content: (
       <div>
-        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base mb-8">
-          Built and launched Aceternity UI and Aceternity UI Pro from scratch
-        </p>
+        <ul>
+          <li>
+            <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base mb-8">
+              idk
+            </p>
+          </li>
+        </ul>
+
         <div className="grid grid-cols-2 gap-4">
           <Image
             src="/b4.svg"
@@ -47,12 +52,10 @@ export const journey = [
     content: (
       <div>
         <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base mb-8">
-          I usually run out of copy, but when I see content this big, I try to
-          integrate lorem ipsum.
+          idk
         </p>
         <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base mb-8">
-          Lorem ipsum is for people who are too lazy to write copy. But we are
-          not. Here are some more example of beautiful designs I built.
+          idk
         </p>
         <div className="grid grid-cols-2 gap-4">
           <Image
@@ -92,23 +95,23 @@ export const journey = [
     content: (
       <div>
         <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base mb-4">
-          Deployed 5 new components on Aceternity today
+          idk
         </p>
         <div className="mb-8">
           <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-sm md:text-base">
-            ✅ Card grid component
+            idk
           </div>
           <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-sm md:text-base">
-            ✅ Startup template Aceternity
+            idk
           </div>
           <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-sm md:text-base">
-            ✅ Random file upload lol
+            idk
           </div>
           <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-sm md:text-base">
-            ✅ Himesh Reshammiya Music CD
+            idk
           </div>
           <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-sm md:text-base">
-            ✅ Salman Bhai Fan Club registrations open
+            idk
           </div>
         </div>
         <div className="grid grid-cols-2 gap-4">
