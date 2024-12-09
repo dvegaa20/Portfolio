@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Video from "next-video";
+
 import {
   Carousel,
   CarouselContent,
@@ -10,6 +12,7 @@ import {
 interface Project {
   des: React.ReactNode | string;
   img?: string[];
+  video?: string;
   iconLists: string[];
   linkRepo: string;
   linkProyect: string;
@@ -69,6 +72,13 @@ const DummyContent = ({ project }: { project: Project }) => {
                       <CarouselContent>
                         {project.img.map((image, imgIndex) => (
                           <CarouselItem>
+                            {project.video && (
+                              <Video
+                                src={project.video}
+                                controls
+                                className="rounded-lg"
+                              />
+                            )}
                             <Image
                               key={`project-image-${imgIndex}`}
                               src={
@@ -198,7 +208,8 @@ export const projectData = [
               ultimate tool for optimizing dental practice management.
             </>
           ),
-          img: [""],
+          img: ["/phone1.svg"],
+          video: "",
           iconLists: [
             "./icons/next.svg",
             "./icons/re.svg",
@@ -256,7 +267,14 @@ export const projectData = [
               is arround 30 seconds.
             </>
           ),
-          img: ["/ingex1.svg", "/ingex1.svg", "/ingex1.svg"],
+          img: [
+            "/ingex1.svg",
+            "/ingex2.svg",
+            "/ingex3.svg",
+            "/ingex4.svg",
+            "/ingex5.svg",
+          ],
+          video: "",
           iconLists: [
             "./icons/re.svg",
             "./icons/py.svg",
@@ -309,6 +327,7 @@ export const projectData = [
             </>
           ),
           img: ["/p1.png"],
+          video: "",
           iconLists: ["./icons/py.svg", "./icons/odoo.svg", "./icons/cmmi.svg"],
           linkRepo: "https://github.com/Black-Dot-2024/cr-blackdot",
           linkProyect: "",
@@ -347,7 +366,8 @@ export const projectData = [
               <span className="text-purple"> sustainable businesses</span>.
             </>
           ),
-          img: ["/p1.png"],
+          img: [""],
+          video: "/iOS.mp4",
           iconLists: [
             "./icons/next.svg",
             "./icons/ts.svg",
@@ -398,6 +418,7 @@ export const projectData = [
             </>
           ),
           img: ["/p1.png"],
+          video: "",
           iconLists: [
             "./icons/py.svg",
             "./icons/unity.svg",
@@ -443,6 +464,7 @@ export const projectData = [
             </>
           ),
           img: ["/p1.png"],
+          video: "",
           iconLists: [
             "./icons/re.svg",
             "./icons/css.svg",
@@ -491,6 +513,7 @@ export const projectData = [
             </>
           ),
           img: ["/p1.png"],
+          video: "",
           iconLists: [
             "./icons/html.svg",
             "./icons/css.svg",
