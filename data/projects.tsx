@@ -1,4 +1,11 @@
 import Image from "next/image";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 interface Project {
   des: React.ReactNode | string;
@@ -52,24 +59,31 @@ const DummyContent = ({ project }: { project: Project }) => {
             {index === 1 && project.img && (
               <div>
                 <div>
-                  <h2 className="text-white text-xl md:text-3xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans pb-4">
+                  <h2 className="text-white text-xl md:text-3xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans pb-8">
                     Project Gallery
                   </h2>
                 </div>
                 <div className="space-y-10">
-                  {project.img.map((image, imgIndex) => (
-                    <Image
-                      key={`project-image-${imgIndex}`}
-                      src={
-                        image ||
-                        "https://images.unsplash.com/photo-1553451166-232112bda6f6?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                      }
-                      alt={`Project visual ${imgIndex}`}
-                      height="2000"
-                      width="2000"
-                      className=""
-                    />
-                  ))}
+                  <Carousel>
+                    <CarouselContent>
+                      {project.img.map((image, imgIndex) => (
+                        <CarouselItem>
+                          <Image
+                            key={`project-image-${imgIndex}`}
+                            src={
+                              image ||
+                              "https://images.unsplash.com/photo-1553451166-232112bda6f6?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            }
+                            alt={`Visual ${imgIndex}`}
+                            height="2000"
+                            width="2000"
+                          />
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    <CarouselPrevious />
+                    <CarouselNext />
+                  </Carousel>
                 </div>
               </div>
             )}
@@ -87,7 +101,6 @@ const DummyContent = ({ project }: { project: Project }) => {
                       alt={`Project icon ${iconIndex}`}
                       height="50"
                       width="50"
-                      className=""
                     />
                   ))}
                 </div>
@@ -231,7 +244,7 @@ export const projectData = [
               is arround 30 seconds.
             </>
           ),
-          img: ["/p1.png"],
+          img: ["/ingex1.svg", "/ingex1.svg", "/ingex1.svg"],
           iconLists: [
             "./icons/re.svg",
             "./icons/py.svg",
