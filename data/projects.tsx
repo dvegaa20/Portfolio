@@ -64,26 +64,38 @@ const DummyContent = ({ project }: { project: Project }) => {
                   </h2>
                 </div>
                 <div className="space-y-10">
-                  <Carousel>
-                    <CarouselContent>
-                      {project.img.map((image, imgIndex) => (
-                        <CarouselItem>
-                          <Image
-                            key={`project-image-${imgIndex}`}
-                            src={
-                              image ||
-                              "https://images.unsplash.com/photo-1553451166-232112bda6f6?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            }
-                            alt={`Visual ${imgIndex}`}
-                            height="2000"
-                            width="2000"
-                          />
-                        </CarouselItem>
-                      ))}
-                    </CarouselContent>
-                    <CarouselPrevious />
-                    <CarouselNext />
-                  </Carousel>
+                  {project.img.length > 1 ? (
+                    <Carousel>
+                      <CarouselContent>
+                        {project.img.map((image, imgIndex) => (
+                          <CarouselItem>
+                            <Image
+                              key={`project-image-${imgIndex}`}
+                              src={
+                                image ||
+                                "https://images.unsplash.com/photo-1553451166-232112bda6f6?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                              }
+                              alt={`Visual ${imgIndex}`}
+                              height="2000"
+                              width="2000"
+                            />
+                          </CarouselItem>
+                        ))}
+                      </CarouselContent>
+                      <CarouselPrevious />
+                      <CarouselNext />
+                    </Carousel>
+                  ) : (
+                    <Image
+                      src={
+                        project.img[0] ||
+                        "https://images.unsplash.com/photo-1553451166-232112bda6f6?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      }
+                      alt="Default or single image"
+                      height="2000"
+                      width="2000"
+                    />
+                  )}
                 </div>
               </div>
             )}
