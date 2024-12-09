@@ -15,7 +15,7 @@ const DummyContent = ({ project }: { project: Project }) => {
         return (
           <div
             key={`dummy-content-${index}`}
-            className="bg-[#F5F5F7] dark:bg-neutral-800 p-4 md:p-10 rounded-3xl mb-4"
+            className="bg-black-300 p-4 md:p-10 rounded-3xl mb-4"
           >
             {index === 0 && (
               <div>
