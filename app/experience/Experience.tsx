@@ -1,6 +1,6 @@
 import { workExperience } from "@/data";
 import React from "react";
-import { Button } from "./ui/MovingBorders";
+import { Button } from "@/components/ui/MovingBorders";
 
 function lcg(seed: number) {
   return function () {

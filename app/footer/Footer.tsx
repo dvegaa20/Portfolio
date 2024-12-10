@@ -1,8 +1,8 @@
 import React from "react";
-import MagicButton from "./ui/MagicButton";
+import MagicButton from "@/components/ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa";
 import { socialMedia } from "@/data";
-import { LinkPreview } from "./ui/LinkPreview";
+import { LinkPreview } from "@/components/ui/LinkPreview";
 
 function Footer() {
   return (

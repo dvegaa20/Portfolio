@@ -1,9 +1,9 @@
 import React from "react";
-import { Spotlight } from "./ui/Spotlight";
-import { TextGenerateEffect } from "./ui/TextGenerateEffect";
-import MagicButton from "./ui/MagicButton";
+import { Spotlight } from "@/components/ui/Spotlight";
+import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
+import MagicButton from "@/components/ui/MagicButton";
 import { FaDownload } from "react-icons/fa";
-import { FlipWords } from "./ui/FlipWords";
+import { FlipWords } from "@/components/ui/FlipWords";
 
 function Hero() {
   return (

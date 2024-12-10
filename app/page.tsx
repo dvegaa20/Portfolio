@@ -1,10 +1,10 @@
 import { FloatingNav } from "@/components/ui/FloatingNav";
-import Hero from "@/components/Hero";
-import Grid from "@/components/Grid";
-import Experience from "@/components/Experience";
-import Footer from "@/components/Footer";
+import Hero from "./hero/Hero";
+import Grid from "./grid/Grid";
+import AppleCardsCarousel from "./details/Details";
+import Experience from "./experience/Experience";
+import Footer from "./footer/Footer";
 import { navItems } from "@/data";
-import AppleCardsCarousel from "@/components/Details";
 
 export default function Home() {
   return (
