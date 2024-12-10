@@ -69,16 +69,6 @@ const DummyContent = ({ project }: { project: Project }) => {
                   {project.img.length > 1 || project.video ? (
                     <Carousel>
                       <CarouselContent>
-                        {project.img.map((image, imgIndex) => (
-                          <CarouselItem key={`project-image-${imgIndex}`}>
-                            <Image
-                              src={image}
-                              alt={`Visual ${imgIndex}`}
-                              height="2000"
-                              width="2000"
-                            />
-                          </CarouselItem>
-                        ))}
                         {project.video && (
                           <CarouselItem key="video">
                             <iframe
@@ -95,6 +85,16 @@ const DummyContent = ({ project }: { project: Project }) => {
                             />
                           </CarouselItem>
                         )}
+                        {project.img.map((image, imgIndex) => (
+                          <CarouselItem key={`project-image-${imgIndex}`}>
+                            <Image
+                              src={image}
+                              alt={`Visual ${imgIndex}`}
+                              height="2000"
+                              width="2000"
+                            />
+                          </CarouselItem>
+                        ))}
                       </CarouselContent>
                       <CarouselPrevious />
                       <CarouselNext />
