@@ -172,12 +172,11 @@ export const Card = ({
         handleClose();
       }
     }
-    if (typeof window === "undefined") {
-      if (open) {
-        document.body.style.overflow = "hidden";
-      } else {
-        document.body.style.overflow = "auto";
-      }
+
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
     }
 
     window.addEventListener("keydown", onKeyDown);
