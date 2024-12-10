@@ -5,9 +5,6 @@ export const useOutsideClick = (
   callback: Function
 ) => {
   useEffect(() => {
-    if (typeof window === "undefined") {
-      return; // No ejecutar el código en el servidor
-    }
     const listener = (event: any) => {
       if (!ref.current || ref.current.contains(event.target)) {
         return;
