@@ -165,23 +165,32 @@ export const Card = ({
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const { onCardClose } = useContext(CarouselContext);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    function onKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") {
-        handleClose();
+    // Detectar si estamos en el cliente
+    setIsClient(typeof window !== "undefined");
+  }, []);
+
+  useEffect(() => {
+    if (isClient) {
+      // Solo manipular document.body.style.overflow en el cliente
+      if (open) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "auto";
       }
-    }
 
-    if (open) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+      const onKeyDown = (event: KeyboardEvent) => {
+        if (event.key === "Escape") {
+          handleClose();
+        }
+      };
 
-    window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
-  }, [open]);
+      window.addEventListener("keydown", onKeyDown);
+      return () => window.removeEventListener("keydown", onKeyDown);
+    }
+  }, [open, isClient]);
 
   useOutsideClick(containerRef, () => handleClose());
 
