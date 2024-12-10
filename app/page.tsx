@@ -2,7 +2,6 @@ import { FloatingNav } from "@/components/ui/FloatingNav";
 import Hero from "@/components/Hero";
 import Grid from "@/components/Grid";
 import Experience from "@/components/Experience";
-import { Journey } from "@/components/Journey";
 import Footer from "@/components/Footer";
 import { navItems } from "@/data";
 import AppleCardsCarousel from "@/components/Details";
@@ -16,7 +15,6 @@ export default function Home() {
         <Grid />
         <AppleCardsCarousel />
         <Experience />
-        {/* <Journey /> */}
         <Footer />
       </div>
     </main>
