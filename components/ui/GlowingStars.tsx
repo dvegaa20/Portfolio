@@ -4,6 +4,13 @@ import React, { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
+function lcg(seed: number) {
+  return function () {
+    seed = (seed * 48271) % 2147483647;
+    return seed / 2147483647;
+  };
+}
+
 export const GlowingStarsBackgroundCard = ({
   className,
   children,
@@ -71,9 +78,10 @@ export const Illustration = ({ mouseEnter }: { mouseEnter: boolean }) => {
   const highlightedStars = useRef<number[]>([]);
 
   useEffect(() => {
+    const prng = lcg(12345);
     const interval = setInterval(() => {
       highlightedStars.current = Array.from({ length: 5 }, () =>
-        Math.floor(Math.random() * stars)
+        Math.floor(prng() * stars)
       );
       setGlowingStars([...highlightedStars.current]);
     }, 3000);

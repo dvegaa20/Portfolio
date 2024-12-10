@@ -1,6 +1,13 @@
 import { cn } from "@/lib/utils";
 import React from "react";
 
+function lcg(seed: number) {
+  return function () {
+    seed = (seed * 48271) % 2147483647;
+    return seed / 2147483647;
+  };
+}
+
 export const Meteors = ({
   number,
   className,
@@ -8,13 +15,6 @@ export const Meteors = ({
   number?: number;
   className?: string;
 }) => {
-  function lcg(seed: number) {
-    return function () {
-      seed = (seed * 48271) % 2147483647;
-      return seed / 2147483647;
-    };
-  }
-
   const meteors = new Array(number || 20).fill(true);
   const prng = lcg(12345);
   return (

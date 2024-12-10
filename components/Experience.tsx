@@ -2,7 +2,16 @@ import { workExperience } from "@/data";
 import React from "react";
 import { Button } from "./ui/MovingBorders";
 
+function lcg(seed: number) {
+  return function () {
+    seed = (seed * 48271) % 2147483647;
+    return seed / 2147483647;
+  };
+}
+
 function Experience() {
+  const prng = lcg(12345);
+
   return (
     <div id="experience">
       <h1 className="heading">
@@ -16,7 +25,7 @@ function Experience() {
         {workExperience.map((card) => (
           <Button
             key={card.id}
-            duration={Math.floor(Math.random() * 10000) + 10000}
+            duration={Math.floor(prng() * 10000) + 10000}
             borderRadius="1.75rem"
             className="flex-1 tex-white border-neutral-200 dark:border-slate-800"
           >
