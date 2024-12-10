@@ -69,6 +69,16 @@ const DummyContent = ({ project }: { project: Project }) => {
                   {project.img.length > 1 || project.video ? (
                     <Carousel>
                       <CarouselContent>
+                        {project.img.map((image, imgIndex) => (
+                          <CarouselItem key={`project-image-${imgIndex}`}>
+                            <Image
+                              src={image}
+                              alt={`Visual ${imgIndex}`}
+                              height="2000"
+                              width="2000"
+                            />
+                          </CarouselItem>
+                        ))}
                         {project.video && (
                           <CarouselItem key="video">
                             <iframe
@@ -85,16 +95,6 @@ const DummyContent = ({ project }: { project: Project }) => {
                             />
                           </CarouselItem>
                         )}
-                        {project.img.map((image, imgIndex) => (
-                          <CarouselItem key={`project-image-${imgIndex}`}>
-                            <Image
-                              src={image}
-                              alt={`Visual ${imgIndex}`}
-                              height="2000"
-                              width="2000"
-                            />
-                          </CarouselItem>
-                        ))}
                       </CarouselContent>
                       <CarouselPrevious />
                       <CarouselNext />
@@ -170,7 +170,7 @@ export const projectData = [
           img: [
             "https://images.unsplash.com/photo-1553451166-232112bda6f6?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           ],
-          video: "lEflo_sc82g",
+          video: "",
           iconLists: ["./icons/swift.svg", "./icons/xcode.svg"],
           linkRepo: "",
           linkProyect: "",
@@ -280,7 +280,7 @@ export const projectData = [
             "/ingex4.svg",
             "/ingex5.svg",
           ],
-          video: "lEflo_sc82g",
+          video: "_Dfrdwxvn_o",
           iconLists: [
             "./icons/re.svg",
             "./icons/py.svg",
@@ -332,7 +332,9 @@ export const projectData = [
               organizational compliance.
             </>
           ),
-          img: ["/p1.png"],
+          img: [
+            "https://images.unsplash.com/photo-1553451166-232112bda6f6?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          ],
           video: "",
           iconLists: ["./icons/py.svg", "./icons/odoo.svg", "./icons/cmmi.svg"],
           linkRepo: "https://github.com/Black-Dot-2024/cr-blackdot",
@@ -372,8 +374,10 @@ export const projectData = [
               <span className="text-purple"> sustainable businesses</span>.
             </>
           ),
-          img: [""],
-          video: "/iOS.mp4",
+          img: [
+            "https://images.unsplash.com/photo-1553451166-232112bda6f6?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          ],
+          video: "ZtySl1-RdmQ",
           iconLists: [
             "./icons/next.svg",
             "./icons/ts.svg",
@@ -423,7 +427,9 @@ export const projectData = [
               effort and adapting to the changing dynamics of the environment.
             </>
           ),
-          img: ["/p1.png"],
+          img: [
+            "https://images.unsplash.com/photo-1553451166-232112bda6f6?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          ],
           video: "",
           iconLists: [
             "./icons/py.svg",
@@ -469,7 +475,9 @@ export const projectData = [
               conversion potential.
             </>
           ),
-          img: ["/p1.png"],
+          img: [
+            "https://images.unsplash.com/photo-1553451166-232112bda6f6?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          ],
           video: "",
           iconLists: [
             "./icons/re.svg",
@@ -518,7 +526,9 @@ export const projectData = [
               the teams using it.
             </>
           ),
-          img: ["/p1.png"],
+          img: [
+            "https://images.unsplash.com/photo-1553451166-232112bda6f6?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          ],
           video: "",
           iconLists: [
             "./icons/html.svg",
