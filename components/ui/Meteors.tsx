@@ -8,7 +8,15 @@ export const Meteors = ({
   number?: number;
   className?: string;
 }) => {
+  function lcg(seed: number) {
+    return function () {
+      seed = (seed * 48271) % 2147483647;
+      return seed / 2147483647;
+    };
+  }
+
   const meteors = new Array(number || 20).fill(true);
+  const prng = lcg(12345);
   return (
     <>
       {meteors.map((el, idx) => (
@@ -21,9 +29,9 @@ export const Meteors = ({
           )}
           style={{
             top: 0,
-            left: Math.floor(Math.random() * (400 - -400) + -400) + "px",
-            animationDelay: Math.random() * (0.8 - 0.2) + 0.2 + "s",
-            animationDuration: Math.floor(Math.random() * (10 - 2) + 2) + "s",
+            left: Math.floor(prng() * (400 - -400) + -400) + "px",
+            animationDelay: prng() * (0.8 - 0.2) + 0.2 + "s",
+            animationDuration: Math.floor(prng() * (10 - 2) + 2) + "s",
           }}
         ></span>
       ))}
