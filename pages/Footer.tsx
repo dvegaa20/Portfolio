@@ -9,12 +9,12 @@ function Footer() {
     <footer className="w-full pt-20 pb-10" id="contact">
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]">
-          So, are you ready to take <span className="text-purple">your</span>{" "}
-          digital precense to the next level?
+          Let&apos;s bring your
+          <span className="text-purple"> digital vision</span> to life, work
+          with me to achieve your goals.
         </h1>
         <p className="text-white-200 md:mt-10 my-5 text-center">
-          Reach out to me today and let&apos;s discuss how I can help you
-          achieve your goals
+          Reach out to me today and let&apos;s create something extraordinary.
         </p>
         <a href="mailto:diego.vega.camacho@gmail.com">
           <MagicButton

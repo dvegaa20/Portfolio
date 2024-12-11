@@ -15,6 +15,7 @@ interface Project {
   iconLists: string[];
   linkRepo: string;
   linkProyect: string;
+  available?: boolean;
 }
 
 const DummyContent = ({ project }: { project: Project }) => {
@@ -61,8 +62,10 @@ const DummyContent = ({ project }: { project: Project }) => {
             {index === 1 && project.img && (
               <div>
                 <div>
-                  <h2 className="text-white text-xl md:text-3xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans pb-8">
-                    Project Gallery
+                  <h2 className="text-white text-xl md:text-3xl font-semibold text-left [text-wrap:balance] font-sans pb-8">
+                    {project.available
+                      ? "Project Gallery"
+                      : "Unfortunatelly, for this one there's no gallery to show. 😔"}
                   </h2>
                 </div>
                 <div className="space-y-10">
@@ -174,6 +177,7 @@ export const projectData = [
           iconLists: ["./icons/swift.svg", "./icons/xcode.svg"],
           linkRepo: "",
           linkProyect: "",
+          available: true,
         }}
       />
     ),
@@ -225,6 +229,7 @@ export const projectData = [
           ],
           linkRepo: "",
           linkProyect: "",
+          available: true,
         }}
       />
     ),
@@ -290,6 +295,7 @@ export const projectData = [
           ],
           linkRepo: "https://github.com/dvegaa20/TDR-Dashboard",
           linkProyect: "https://tdr-dashboard.vercel.app/",
+          available: true,
         }}
       />
     ),
@@ -332,13 +338,12 @@ export const projectData = [
               organizational compliance.
             </>
           ),
-          img: [
-            "https://images.unsplash.com/photo-1553451166-232112bda6f6?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          ],
-          video: "",
+          img: ["/blackdot1.svg"],
+          video: "vsZgRB3zuu8",
           iconLists: ["./icons/py.svg", "./icons/odoo.svg", "./icons/cmmi.svg"],
           linkRepo: "https://github.com/Black-Dot-2024/cr-blackdot",
           linkProyect: "",
+          available: true,
         }}
       />
     ),
@@ -374,20 +379,21 @@ export const projectData = [
               <span className="text-purple"> sustainable businesses</span>.
             </>
           ),
-          img: [
-            "https://images.unsplash.com/photo-1553451166-232112bda6f6?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          ],
+          img: ["/green1.svg"],
           video: "ZtySl1-RdmQ",
           iconLists: [
+            "./icons/swift.svg",
             "./icons/next.svg",
             "./icons/ts.svg",
             "./icons/tail.svg",
             "./icons/firebase.svg",
             "./icons/oauth.svg",
             "./icons/figma.svg",
+            "./icons/xcode.svg",
           ],
           linkRepo: "https://github.com/dvegaa20/Net-Zero-Citizens",
           linkProyect: "",
+          available: true,
         }}
       />
     ),
@@ -428,7 +434,7 @@ export const projectData = [
             </>
           ),
           img: [
-            "https://images.unsplash.com/photo-1553451166-232112bda6f6?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://images.unsplash.com/photo-1610513320995-1ad4bbf25e55?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           ],
           video: "",
           iconLists: [
@@ -438,6 +444,7 @@ export const projectData = [
           ],
           linkRepo: "https://github.com/dvegaa20/Unity",
           linkProyect: "",
+          available: false,
         }}
       />
     ),
@@ -476,7 +483,14 @@ export const projectData = [
             </>
           ),
           img: [
-            "https://images.unsplash.com/photo-1553451166-232112bda6f6?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "/cloud1.svg",
+            "/cloud2.svg",
+            "/cloud3.svg",
+            "/cloud4.svg",
+            "/cloud5.svg",
+            "/cloud6.svg",
+            "/cloud7.svg",
+            "/cloud8.svg",
           ],
           video: "",
           iconLists: [
@@ -487,6 +501,7 @@ export const projectData = [
           ],
           linkRepo: "https://github.com/dvegaa20/SAAS-LP",
           linkProyect: "https://saas-lp-navy.vercel.app/",
+          available: true,
         }}
       />
     ),
@@ -527,7 +542,7 @@ export const projectData = [
             </>
           ),
           img: [
-            "https://images.unsplash.com/photo-1553451166-232112bda6f6?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://images.unsplash.com/photo-1610513320995-1ad4bbf25e55?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           ],
           video: "",
           iconLists: [
@@ -539,6 +554,7 @@ export const projectData = [
           ],
           linkRepo: "https://github.com/dembA7/Systarch",
           linkProyect: "",
+          available: false,
         }}
       />
     ),

@@ -55,7 +55,8 @@ export const gridItems = [
     title: "Currently building a dental patient management system.",
     description: "Here’s what i’m up to lately",
     className: "md:col-span-3 md:row-span-2",
-    imgClassName: "absolute -right-10 bottom-0 md:w-96 w-60",
+    imgClassName:
+      "absolute -right-12 md:-right-10 -bottom-14 md:bottom-0 md:w-96 w-60",
     titleClassName: "justify-center md:justify-start lg:justify-center",
     img: "./icons/dentist.svg",
     spareImg: "./icons/grid.svg",
