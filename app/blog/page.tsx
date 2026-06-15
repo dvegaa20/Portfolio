@@ -5,15 +5,20 @@ export default function page() {
     return (
         <div>
             <Hero
-                subheader="Discover My Work"
-                header="A Glimpse Into My Digital Creations"
-                description="I've built a"
+                subheader="My Thoughts & Insights"
+                header="Writing About Tech, Development, and Life"
+                description="Exploring topics like"
                 words={[
-                    "Saas",
-                    "Full-Stack Developer",
-                    "Mobile Developer",
-                    "Tech Enthusiast",
-                    "Machine Learning Learner",
+                    "Software Engineering",
+                    "Web Development",
+                    "Machine Learning",
+                    "System Design",
+                    "UI/UX Design",
+                ]}
+                spotlights={[
+                    { className: "top-10 left-10 md:left-20 h-screen", fill: "blue" },
+                    { className: "-top-20 right-10 h-[80vh] w-[50vw]", fill: "white" },
+                    { className: "top-40 left-1/2 h-[80vh] w-[50vw]", fill: "purple" }
                 ]}
             />
         </div>

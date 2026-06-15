@@ -1,6 +1,8 @@
 import { workExperience } from "@/data";
 import { Button } from "@/components/ui/moving-borders";
 import Hero from "@/components/sections/hero";
+import { Timeline } from "@/components/ui/timeline";
+import { timelineData } from "@/data";
 
 function lcg(seed: number) {
     return function () {
@@ -17,13 +19,18 @@ export default function ExperiencePage() {
             <Hero
                 subheader="Professional Experience"
                 header="A Glimpse Into My Professional Journey"
-                description="I've been a"
+                description="Working as a"
                 words={[
-                    "Saas",
+                    "Software Engineer",
                     "Full-Stack Developer",
                     "Mobile Developer",
                     "Tech Enthusiast",
-                    "Machine Learning Learner",
+                    "Problem Solver",
+                ]}
+                spotlights={[
+                    { className: "-top-20 -left-10 md:-left-32 md:-top-10 h-screen", fill: "white" },
+                    { className: "top-20 left-3/4 h-[80vh] w-[50vw]", fill: "purple" },
+                    { className: "top-40 left-1/3 h-[80vh] w-[50vw]", fill: "blue" }
                 ]}
             />
             <div className="w-full pb-16 grid lg:grid-cols-4 grid-cols-1 gap-10">
@@ -52,6 +59,7 @@ export default function ExperiencePage() {
                     </Button>
                 ))}
             </div>
+            <Timeline data={timelineData} />
         </>
     );
 }

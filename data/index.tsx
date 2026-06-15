@@ -103,6 +103,31 @@ export const workExperience = [
   },
 ];
 
+export const timelineData = [
+  {
+    title: "2023",
+    content: (
+      <div className="space-y-4">
+        <h3 className="text-xl font-bold">Started Working at NovaTech</h3>
+        <p className="text-neutral-600 dark:text-neutral-300">
+          Joined NovaTech as a Software Engineer and worked on various projects including a SaaS platform and a mobile application.
+        </p>
+      </div>
+    ),
+  },
+  {
+    title: "2024",
+    content: (
+      <div className="space-y-4">
+        <h3 className="text-xl font-bold">Promoted to Senior Software Engineer</h3>
+        <p className="text-neutral-600 dark:text-neutral-300">
+          Got promoted to Senior Software Engineer and led a team of developers working on a new SaaS platform.
+        </p>
+      </div>
+    ),
+  },
+];
+
 // Footer icons //
 export const socialMedia = [
   {

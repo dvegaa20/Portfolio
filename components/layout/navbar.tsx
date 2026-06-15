@@ -22,10 +22,10 @@ export default function ResizableNavbar({ navItems }: { navItems: NavItem[] }) {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     return (
-        <div className="relative w-full pt-6">
+        <div className="w-full h-24">
             <Navbar>
                 {/* Desktop Navigation */}
-                <NavBody visible={true}>
+                <NavBody>
                     <NavbarLogo />
                     <NavItems items={navItems} />
                     <div className="flex items-center gap-4">

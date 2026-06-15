@@ -1,31 +1,41 @@
 import React from "react";
 import { Spotlight } from "@/components/ui/spotlight";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import MagicButton from "@/components/ui/magic-button";
-import { FaPhoneAlt } from "react-icons/fa";
 import { FlipWords } from "@/components/ui/flip-words";
+
+interface SpotlightConfig {
+    className: string;
+    fill: string;
+}
 
 interface HeroProps {
     subheader: string;
     header: string;
     description: string;
     words: string[];
+    spotlights?: SpotlightConfig[];
 }
 
-export default function Hero({ subheader, header, description, words }: HeroProps) {
+export default function Hero({ subheader, header, description, words, spotlights }: HeroProps) {
+    const defaultSpotlights = [
+        { className: "-top-40 -left-10 md:-left-32 md:-top-20 h-screen", fill: "white" },
+        { className: "top-10 left-full h-[80vh] w-[50vw]", fill: "purple" },
+        { className: "top-28 left-80 h-[80vh] w-[50vw]", fill: "blue" }
+    ];
+
+    const spots = spotlights || defaultSpotlights;
+
     return (
         <div className="py-16">
             {/* Spotlights div. */}
             <div>
-                <Spotlight
-                    className="-top-40 -left-10 md:-left32 md:-top-20 h-screen"
-                    fill="white"
-                />
-                <Spotlight
-                    className="top-10 left-full h-[80vh] w-[50vw]"
-                    fill="purple"
-                />
-                <Spotlight className="top-28 left-80 h-[80vh] w-[50vw]" fill="blue" />
+                {spots.map((spot, idx) => (
+                    <Spotlight
+                        key={idx}
+                        className={spot.className}
+                        fill={spot.fill}
+                    />
+                ))}
             </div>
 
             {/* Main content of the hero section. */}
@@ -46,13 +56,6 @@ export default function Hero({ subheader, header, description, words }: HeroProp
                     <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
                         {description}<FlipWords words={words} />
                     </p>
-                    <a href="" download>
-                        <MagicButton
-                            title="Contact Me"
-                            icon={<FaPhoneAlt />}
-                            position="left"
-                        />
-                    </a>
                 </div>
             </div>
         </div>
