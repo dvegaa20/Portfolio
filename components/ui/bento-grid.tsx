@@ -5,9 +5,9 @@ import React, { useState } from "react";
 import { cn } from "@/lib/utils";
 import { IoCopyOutline } from "react-icons/io5";
 import animationData from "@/data/confetti.json";
-import { BackgroundGradientAnimation } from "./GradientBg";
-import MagicButton from "./MagicButton";
-import { Meteors } from "../ui/Meteors";
+import { BackgroundGradientAnimation } from "./gradient-background";
+import MagicButton from "./magic-button";
+import { Meteors } from "./meteors";
 
 const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 
@@ -82,9 +82,8 @@ export const BentoGridItem = ({
           )}
         </div>
         <div
-          className={`absolute right-0 -bottom-5 ${
-            id === 5 && "w-full opacity-80"
-          }`}
+          className={`absolute right-0 -bottom-5 ${id === 5 && "w-full opacity-80"
+            }`}
         >
           {spareImg && (
             <img

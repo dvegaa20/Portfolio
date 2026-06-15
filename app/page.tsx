@@ -1,22 +1,22 @@
-import { FloatingNav } from "@/components/ui/FloatingNav";
-import Hero from "@/pages/Hero";
-import Grid from "@/pages/Grid";
-import AppleCardsCarousel from "@/pages/Details";
-import Experience from "@/pages/Experience";
-import Footer from "@/pages/Footer";
-import { navItems } from "@/data";
+import Hero from "@/components/sections/hero"
+import Grid from "@/components/sections/Grid";
 
 export default function Home() {
   return (
-    <main className="relative bg-black-100 flex justify-center items-center flex-col mx-auto sm:px-10 px-5 overflow-clip">
-      <div className="max-w-7xl w-full">
-        <FloatingNav navItems={navItems} />
-        <Hero />
-        <Grid />
-        <AppleCardsCarousel />
-        <Experience />
-        <Footer />
-      </div>
-    </main>
+    <>
+      <Hero
+        subheader="Let's Build Something Amazing Together."
+        header="Simple, Clean, and Effective Digital Solutions"
+        description="Hi, I'm Diego Vega a"
+        words={[
+          "Software Engineer",
+          "Full-Stack Developer",
+          "Mobile Developer",
+          "Tech Enthusiast",
+          "Machine Learning Learner",
+        ]}
+      />
+      <Grid />
+    </>
   );
 }
