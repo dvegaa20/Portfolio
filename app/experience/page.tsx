@@ -19,11 +19,9 @@ export default function ExperiencePage() {
                 header="A Glimpse Into My Professional Journey"
                 description="Working as a"
                 words={[
-                    "Software Engineer",
-                    "Full-Stack Developer",
-                    "Mobile Developer",
-                    "Tech Enthusiast",
-                    "Problem Solver",
+                    "Software Engineer Specialist",
+                    "CTO & Co-Founder",
+                    "Junior Tech Lead",
                 ]}
                 spotlights={[
                     { className: "-top-20 -left-10 md:-left-32 md:-top-10 h-screen", fill: "white" },
