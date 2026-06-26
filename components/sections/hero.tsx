@@ -20,13 +20,13 @@ export default function Hero({ subheader, header, description, words, spotlights
     const defaultSpotlights = [
         { className: "-top-40 -left-10 md:-left-32 md:-top-20 h-screen", fill: "white" },
         { className: "top-10 left-full h-[80vh] w-[50vw]", fill: "purple" },
-        { className: "top-28 left-80 h-[80vh] w-[50vw]", fill: "blue" }
+        { className: "top-28 left-80 h-[80vh] w-[50vw]", fill: "blue" },
     ];
 
     const spots = spotlights || defaultSpotlights;
 
     return (
-        <div className="py-16">
+        <div className="pt-16 relative">
             {/* Spotlights div. */}
             <div>
                 {spots.map((spot, idx) => (
@@ -39,7 +39,7 @@ export default function Hero({ subheader, header, description, words, spotlights
             </div>
 
             {/* Main content of the hero section. */}
-            <div className="h-screen w-full dark:bg-black-100 bg-white  dark:bg-grid-white/[0.03] bg-grid-black/[0.2] flex items-center justify-center absolute top-0 left-0">
+            <div className="absolute inset-0 w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black/[0.2] flex items-center justify-center">
                 <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
             </div>
 

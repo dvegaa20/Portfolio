@@ -29,7 +29,6 @@ export default function ResizableNavbar({ navItems }: { navItems: NavItem[] }) {
                     <NavbarLogo />
                     <NavItems items={navItems} />
                     <div className="flex items-center gap-4">
-                        <NavbarButton href="/blog" variant="secondary">Blog</NavbarButton>
                         <NavbarButton href="https://calendly.com/diegovegacaprio/30min" variant="primary">Book a call</NavbarButton>
                     </div>
                 </NavBody>

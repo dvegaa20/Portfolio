@@ -28,7 +28,7 @@ export default function ProjectsPage() {
                     { className: "top-28 left-1/4 h-[80vh] w-[50vw]", fill: "blue" }
                 ]}
             />
-            <div className='pb-16'>
+            <div className='pb-16 w-[98vw] relative left-1/2 -translate-x-1/2'>
                 <Carousel items={cards} />
             </div>
             <Cta />

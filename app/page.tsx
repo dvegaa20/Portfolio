@@ -19,8 +19,8 @@ export default function Home() {
           "Machine Learning Learner",
         ]}
       />
-      <div className="flex justify-center relative z-10 -mt-32 mb-20">
-        <a href="/Diego-Vega-Resume.pdf" download>
+      <div className="flex justify-center relative z-10 -mt-20 mb-20">
+        <a href="/CV.pdf" download>
           <MagicButton
             title="Check out my Resume"
             icon={<FaDownload />}

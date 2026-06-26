@@ -10,6 +10,8 @@ import {
 } from "motion/react";
 
 import React, { useRef, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 
 interface NavbarProps {
@@ -70,7 +72,7 @@ export const Navbar = ({ children, className }: NavbarProps) => {
     <motion.div
       ref={ref}
       // IMPORTANT: Change this to class of `fixed` if you want the navbar to be fixed
-      className={cn("fixed inset-x-0 top-6 z-50 w-full", className)}
+      className={cn("fixed inset-x-0 top-4 z-50 w-full", className)}
     >
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
@@ -138,13 +140,13 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
           >
             {isActive && (
               <div
-                className="absolute inset-0 h-full w-full rounded-full bg-gray-100 dark:bg-neutral-800"
+                className="absolute inset-0 h-full w-full rounded-full bg-gray-100 dark:bg-neutral-700/50"
               />
             )}
             {hovered === idx && !isActive && (
               <motion.div
                 layoutId="hovered"
-                className="absolute inset-0 h-full w-full rounded-full bg-gray-200 dark:bg-neutral-700/50"
+                className="absolute inset-0 h-full w-full rounded-full bg-gray-200 dark:bg-neutral-700/30"
               />
             )}
             <span className={cn("relative z-20", isActive ? "text-black dark:text-white" : "")}>{item.name}</span>
@@ -242,18 +244,17 @@ export const MobileNavToggle = ({
 
 export const NavbarLogo = () => {
   return (
-    <a
+    <Link
       href="/"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
     >
-      <img
-        src="https://assets.aceternity.com/logo-dark.png"
+      <Image
+        src="/logo.svg"
         alt="logo"
         width={30}
         height={30}
       />
-      <span className="font-medium text-black dark:text-white">Startup</span>
-    </a>
+    </Link>
   );
 };
 

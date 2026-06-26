@@ -71,38 +71,6 @@ export const gridItems = [
   },
 ];
 
-// Work experience section //
-export const workExperience = [
-  {
-    id: 1,
-    title: 'Incoming Intern Developer',
-    desc: 'Set to join Itransition as an Intern Developer starting in January 2025. 🧑‍💻',
-    className: 'md:col-span-2',
-    thumbnail: './icons/pc.svg',
-  },
-  {
-    id: 2,
-    title: 'Front End Developer',
-    desc: 'Designed and developed the landing page for a Software-as-a-Service (SaaS) startup using React, delivering a modern and engaging interface as a freelance developer. 😲',
-    className: 'md:col-span-2',
-    thumbnail: './icons/rocket.svg',
-  },
-  {
-    id: 3,
-    title: 'Software Developer - Academic',
-    desc: 'Designed and implemented the survey interface for an Odoo module using Python, enhancing user experience and functionality. Collaborated within a CMMI-compliant software development department to ensure high-quality delivery and process efficiency. 💻',
-    className: 'md:col-span-2',
-    thumbnail: './icons/chart.svg',
-  },
-  {
-    id: 4,
-    title: 'Mobile Developer - Academic',
-    desc: 'Developed the reviews interface for an iOS mobile application using Swift, enhancing user engagement and satisfaction. Collaborated within a team to deliver a high-quality solution to connect providers and buyers of eco-friendly products. 📱',
-    className: 'md:col-span-2',
-    thumbnail: './icons/phone.svg',
-  },
-];
-
 export const timelineData = [
   {
     title: "2023",

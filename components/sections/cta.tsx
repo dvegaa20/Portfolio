@@ -10,12 +10,18 @@ import MagicButton from "@/components/ui/magic-button";
 import { FaPhoneAlt } from "react-icons/fa"
 import Image from "next/image";
 
+import { Button } from "@/components/ui/moving-borders";
+
 export function Cta() {
     return (
         <section className="w-full relative">
             {/* CTA Container with grid-like styling */}
-            <div
-                className="relative flex flex-col md:flex-row items-center justify-between p-8 md:p-12 lg:p-16 rounded-3xl overflow-hidden shadow-xl border border-white/[0.15] w-full min-h-[400px]"
+            <Button
+                as="div"
+                duration={3000}
+                borderRadius="1.5rem"
+                containerClassName="w-full shadow-xl"
+                className="relative flex flex-col md:flex-row items-center justify-between p-8 md:p-12 lg:p-16 overflow-hidden border border-white/[0.15] w-full min-h-[400px]"
                 style={{
                     background: "rgb(4,7,29)",
                     backgroundColor: "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
@@ -79,7 +85,7 @@ export function Cta() {
                         <span className="text-white/40 text-xs mt-2">Will be replaced</span>
                     </div>
                 </div>
-            </div>
+            </Button>
         </section>
     )
 }

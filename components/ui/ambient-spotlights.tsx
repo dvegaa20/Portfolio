@@ -12,7 +12,8 @@ export default function AmbientSpotlights() {
     const rightSpotlights = [
         { className: "top-[40%] -left-10 md:-left-32 h-[75vh] w-[55vw]", fill: "purple" },
         { className: "top-[88%] -left-10 md:-left-32 h-[100vh] w-[45vw]", fill: "blue" },
-        { className: "top-[92%] -left-10 md:-left-32 h-[75vh] w-[50vw]", fill: "white" }
+        { className: "top-[92%] -left-10 md:-left-32 h-[75vh] w-[50vw]", fill: "white" },
+        { className: "top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-[80vh] w-[50vw]", fill: "blue" }
     ];
 
     return (

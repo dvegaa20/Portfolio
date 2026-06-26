@@ -24,6 +24,9 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: 'Diego Vega - Portfolio',
   description: "Modern portfolio with Next.js",
+  icons: {
+    icon: '/logo.svg',
+  },
 };
 
 export default function RootLayout({
