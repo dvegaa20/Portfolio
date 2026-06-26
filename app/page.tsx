@@ -15,8 +15,9 @@ export default function Home() {
           "Software Engineer",
           "Full-Stack Developer",
           "Mobile Developer",
-          "Tech Enthusiast",
-          "Machine Learning Learner",
+          "Problem Solver",
+          "Creative Thinker",
+          "Tech Enthusiast"
         ]}
       />
       <div className="flex justify-center relative z-10 -mt-20 mb-20">

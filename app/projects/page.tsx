@@ -1,14 +1,10 @@
 import React from 'react'
 import Hero from "@/components/sections/hero";
-import { Carousel, Card } from "@/components/ui/apple-cards";
-import { projectData } from "@/data/projects";
+import { ProjectShowcase } from "@/components/ui/project-showcase";
+import { academicProjectData, professionalProjectData } from "@/data/projects";
 import { Cta } from '@/components/sections/cta';
 
 export default function ProjectsPage() {
-    const cards = projectData.map((card, index) => (
-        <Card key={card.src} card={card} index={index} />
-    ));
-
     return (
         <>
             <Hero
@@ -28,8 +24,22 @@ export default function ProjectsPage() {
                     { className: "top-28 left-1/4 h-[80vh] w-[50vw]", fill: "blue" }
                 ]}
             />
-            <div className='pb-16 w-[98vw] relative left-1/2 -translate-x-1/2'>
-                <Carousel items={cards} />
+            <div className='pb-24 space-y-24'>
+                <section>
+                    <div className="max-w-7xl mx-auto px-4 mb-10">
+                        <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">Professional Work</h2>
+                        <p className="text-neutral-400 text-lg">Real-world software built for global clients and personal entrepreneurial startups.</p>
+                    </div>
+                    <ProjectShowcase projects={professionalProjectData} />
+                </section>
+
+                <section>
+                    <div className="max-w-7xl mx-auto px-4 mb-10">
+                        <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">Academic Projects</h2>
+                        <p className="text-neutral-400 text-lg">Research, university assignments, and educational prototypes.</p>
+                    </div>
+                    <ProjectShowcase projects={academicProjectData} />
+                </section>
             </div>
             <Cta />
         </>

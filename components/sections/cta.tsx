@@ -38,11 +38,11 @@ export function Cta() {
 
                 {/* Text Content */}
                 <div className="flex-1 flex flex-col items-start justify-center relative z-20 space-y-6 max-w-lg pb-48 md:pb-0">
-                    <h2 className="text-3xl md:text-5xl font-bold text-black dark:text-white">
-                        Call to Action
+                    <h2 className="text-2xl md:text-4xl font-bold text-black dark:text-white">
+                        Ready to take your digital presence to the next level?
                     </h2>
                     <p className="text-[#c1c2d3] max-w-md text-base md:text-lg font-sans font-extralight">
-                        Get access to our collection of pre-built blocks and components today.
+                        Reach out today and let&apos;s discuss how I can help you build robust and maintainable solutions.
                     </p>
 
                     <div className="pt-4">
@@ -72,19 +72,7 @@ export function Cta() {
                 {/* Image Containers - End Bottom */}
 
                 {/* Under Container - 60% Width, 80% Height */}
-                <div className="absolute right-0 bottom-0 w-[90%] md:w-[60%] h-[60%] md:h-[80%] bg-white/5 dark:bg-black-200 border-l border-t border-white/[0.1] rounded-tl-3xl flex items-center justify-center p-4 shadow-2xl z-0 rounded-br-3xl md:rounded-br-none">
-                    <div className="w-full h-full border border-dashed border-white/20 rounded-2xl flex items-center justify-center bg-black/20">
-                        <span className="text-white/30 text-sm">Background Layer</span>
-                    </div>
-                </div>
-
-                {/* Upper Container - 55% Width, 80% Height */}
-                <div className="absolute right-0 bottom-0 w-[85%] md:w-[55%] h-[55%] md:h-[80%] bg-[#04071d] border-l border-t border-white/[0.2] rounded-tl-3xl flex items-center justify-center p-4 md:p-6 shadow-[0_-10px_40px_rgba(0,0,0,0.5)] z-10 rounded-br-3xl md:rounded-br-none">
-                    <div className="w-full h-full border-2 border-dashed border-white/30 rounded-2xl flex flex-col items-center justify-center bg-black/40">
-                        <span className="text-white/70 text-sm font-medium">Upper Image</span>
-                        <span className="text-white/40 text-xs mt-2">Will be replaced</span>
-                    </div>
-                </div>
+                <img src="/decorations/leash.svg" alt="oval decoration" className="absolute -right-6 bottom-0 w-[120%] md:w-[70%] pointer-events-none opacity-60 translate-x-10 translate-y-10" />
             </Button>
         </section>
     )

@@ -188,7 +188,6 @@ const CarouselItem = React.forwardRef<
         orientation === "horizontal" ? "pl-4" : "pt-4",
         className
       )}
-      style={{ width: "500px", height: "500px" }}
       {...props}
     />
   );

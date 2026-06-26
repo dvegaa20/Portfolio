@@ -111,12 +111,18 @@ export const BentoGridItem = ({
           <div className="font-sans font-bold text-lg lg:text-3xl max-w-96 z-10">
             {title}
           </div>
+          {id === 1 && (
+            <img src="/decorations/world.svg" alt="world decoration" className="absolute -right-4 -bottom-4 md:-right-10 md:-bottom-10 w-36 md:w-56 pointer-events-none scale-x-[-1] invert" />
+          )}
           {id === 2 && <Meteors number={40} />}
+          {id === 3 && (
+            <img src="/decorations/mouse.svg" alt="mouse decoration" className="absolute -bottom-5 left-5 w-24 md:w-32 pointer-events-none scale-x-[-1]" />
+          )}
           {id === 3 && (
             <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
               {/* tech stack lists */}
               <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
-                {["Python", "Next.js", "JavaScript"].map((item) => (
+                {["Python", "Next.js", "Angular"].map((item) => (
                   <span
                     key={item}
                     className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
@@ -140,6 +146,17 @@ export const BentoGridItem = ({
                 ))}
               </div>
             </div>
+          )}
+
+          {id === 4 && (
+            <img src="/decorations/asterisk.svg" alt="asterisk decoration" className="absolute -right-5 md:-right-10 -bottom-10 w-32 md:w-48 pointer-events-none opacity-60" />
+          )}
+
+          {id === 5 && (
+            <>
+              <img src="/decorations/leaf.svg" alt="leaf decoration" className="absolute -top-10 -left-1 w-32 md:w-48 rotate-[45deg] opacity-50 pointer-events-none scale-x-[-1]" />
+              <img src="/decorations/leaf.svg" alt="leaf decoration" className="absolute -bottom-5 left-20 w-24 md:w-40 -rotate-[15deg] opacity-30 pointer-events-none" />
+            </>
           )}
 
           {id === 6 && (

@@ -18,6 +18,7 @@ export function Button({
   borderClassName,
   duration,
   className,
+  style,
   ...otherProps
 }: {
   borderRadius?: string;
@@ -27,6 +28,7 @@ export function Button({
   borderClassName?: string;
   duration?: number;
   className?: string;
+  style?: React.CSSProperties;
   [key: string]: unknown;
 }) {
   return (
@@ -61,6 +63,7 @@ export function Button({
         )}
         style={{
           borderRadius: `calc(${borderRadius} * 0.96)`,
+          ...style,
         }}
       >
         {children}
